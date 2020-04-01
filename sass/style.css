@@ -1,0 +1,83 @@
+/* NAVBAR */
+body {
+  height: 100vh;
+}
+
+html {
+  overflow: hidden;
+}
+
+#element::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar-imagem {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.nomeEJ {
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 40px;
+  color: #5D78FF;
+}
+
+.indicadorRegua {
+  width: 3%;
+  height: 3%;
+  margin-bottom: -2rem;
+  border-radius: 50%;
+  position: relative;
+  background-color: whitesmoke;
+}
+
+.numeroInicadorRegua {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #ff3860;
+  text-align: center;
+}
+
+.regua {
+  margin-right: 0%;
+  height: 1.5rem;
+}
+
+.pontosCluster {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.legendaPontosCluster {
+  font-family: poppins;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+}
+
+.suaEJtitle {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 18px;
+  color: #5D78FF;
+}
+
+.clusterIndicador {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  color: #FFB300;
+  display: inline;
+  margin-left: 3.2rem;
+}
+
+.clusterIndicadorIcon {
+  font-size: 2.5rem;
+  visibility: hidden;
+}
+/*# sourceMappingURL=style.css.map */

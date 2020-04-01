@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+	<title>Calculadora de Cluster MEJ | No Bugs</title>
+	<link rel="icon" href="..\imagens\Proibido_Branco@0.5x.png" type="image/x-icon">
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="sass/style.css">
+
+	<!-- Bulma -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	
+  </head>
+  <body>
+
+	<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+		  <a class="navbar-item"  href="https://nobugs.com.br">
+			<img class="navbar-imagem" src="../imagens/Proibido_Azul@0.5x.png" alt="Desevolvido por No Bugs">
+		  </a>
+		</div>
+	</nav>
+
+	<section class="section">
+		<!-- Nome EJ-->
+		<div class="container">
+			<div class="field has-addons" id="ejinputContainer">
+				<div class="control" >
+					<input class="input" type="text" id="ejinput" placeholder="Qual o nome da sua EJ?">
+				</div>
+
+				
+
+				<div class="control">
+					<a class="button is-info" id="salvarNomeEj">
+						salvar
+					</a>
+				</div>
+
+				<div>
+					
+
+					<form action="" id="metasForm" style="margin-left: 3rem;">
+						<p style="float: left; text-align: center;">Qual a meta de cluster da EJ?</p>
+						<div class="control">
+							<label class="radio">
+								<input type="radio" id="nenhuma" name="foobar" checked>
+								Nenhuma
+							<label class="radio">
+							<input type="radio" id="cluster1" name="foobar">
+							Cluster 1
+							</label>
+							<label class="radio">
+							<input type="radio" name="foobar" >
+							Cluster 2
+							</label>
+							<label class="radio">
+								<input type="radio" name="foobar" >
+								Cluster 3
+							</label>
+							<label class="radio">
+								<input type="radio" name="foobar" >
+								Cluster 4
+							</label>
+							<label class="radio">
+								<input type="radio" name="foobar" >
+								Cluster 5
+							</label>
+
+							<label class="radio">
+								<input type="radio" id="inputMetaRadio" name="foobar" >
+								Pontos
+							</label>
+							<input class="input" type="text" id="inputMeta" disabled style="height: 1.5rem; width: 8rem;" placeholder="e.g 291070.12">
+						</div>
+					</form>
+
+
+				</div>
+
+			</div>
+
+			
+
+			<div class="container" id="containerNomeej" style="visibility: hidden; text-align: center;">
+				<h2 class="nomeEJ" id="nomeej">EJ</h2>
+				<div class="tags has-addons" id="editarej">
+					<span class="tag is-danger">Editar Nome</span>
+					<a class="tag is-delete"></a>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="columns">
+				<div class="column is-one-quarter">
+					<div class="card" style="font-family: poppins;">
+						<div class="card-content">
+							<p class="title" style="text-align: center;">Dados da EJ</p>
+							<form id="form" >
+								<div class="field" style="text-align: center;">
+									<label class="label">Total de Membros</label>
+									<div class="control">
+									<input class="input" type="number" style="text-align: center;" id="membros" placeholder="e.g 26">
+									</div>
+								</div>
+
+								<div class="field" style="text-align: center;">
+									<label class="label">Faturamento</label>
+									<div class="control">
+									<input class="input" type="number" style="text-align: center;" id="faturamento" placeholder="e.g 47098,89">
+									</div>
+								</div>
+
+								<div class="field" style="text-align: center;">
+									<label class="label">Membros Execultando</label>
+									<div class="control">
+									<input class="input" type="number" style="text-align: center;" id="membrosExecultando" placeholder="e.g 68">
+									</div>
+								</div>
+
+								<div class="field" style="text-align: center;">
+									<label class="label">NPS</label>
+									<div class="control">
+									<input class="input" type="number" style="text-align: center;" id="nps" max="100" min="-100" placeholder="e.g 70">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="column is-one-quarter">
+					<div class="box">
+						<article class="media">
+							<div class="media-content">
+								<p class="legendaPontosCluster">proximo Cluster</p>
+								<p class="pontosCluster" id="ClusterProximo" style="color: hsl(141, 53%, 53%);">0</p>
+								<p class="legendaPontosCluster">pontos</p>
+							</div>
+						</article>
+					</div>
+
+					<div class="box">
+						<article class="media">
+							<div class="media-content">
+								<p class="legendaPontosCluster">ultimo Cluster</p>
+								<p class="pontosCluster" id="ClusterAnterior" style="color: hsl(348, 100%, 61%);">0</p>
+								<p class="legendaPontosCluster">pontos</p>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="card">
+						<header class="card-header">
+						  <p class="card-header-title is-centered suaEJtitle" style="color: #5D78FF;" id="tituloej" >SUA EMPRESA</p>
+						</header>
+						<div class="card-content">
+							<div class="content" style="text-align: center;">
+								<p>Cluster</p>
+								<p class="clusterIndicador" id="cluster">4</p>
+								<span class="icon clusterIndicadorIcon" id="clusterIndicadorIconVermelho"><i class="fas fa-angle-down " aria-hidden="true"></i></span>
+
+								<span class="icon clusterIndicadorIcon" id="clusterIndicadorIconVerde"><i class="fas fa-angle-up" aria-hidden="true"></i></span>
+
+								<p style="font-weight: bold;" id="totalPontos">0</p>
+								<p style="margin-top: -1rem;">Pontos</p>
+							</div>
+						</div>
+
+
+						<!-- <footer class="card-footer">
+						  <a href="#" id="a" class="card-footer-item">Save</a>
+						  <a href="#" class="card-footer-item">Edit</a>
+						  <a href="#" class="card-footer-item">Delete</a>
+						</footer> -->
+					</div>
+<!-- 
+					<div class="card" style="margin-top: 1.3rem;">
+
+						<div class="card-content">
+							<div class="content" style="text-align: center;">
+
+								<div class="columns">
+									<div class="row">
+										<div class="control" >
+											<input class="input" type="text" id="ejinput" placeholder="Cluster">
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="control" >
+											<input class="input" type="text" id="ejinput" placeholder="Qual o nome da sua EJ?">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<dir style="padding-top: 3rem;"></dir>
+	<section style="margin-left: 5%; margin-right: 5%">
+
+
+	
+		<div class="container numeroInicadorRegua">
+			<div class="indicadorRegua" style="margin-left: -1%; float: left;"><p>0</p></div>
+			<div class="indicadorRegua" style="margin-left: 17%; float: left;">1</div>
+			<div class="indicadorRegua" style="margin-left: 17%; float: left;">2</div>
+			<div class="indicadorRegua" style="margin-left: 17%; float: left;">3</div>
+			<div class="indicadorRegua" style="margin-left: 17%; float: left;">4</div>
+			<div class="indicadorRegua" style="margin-left: 99%;">5</div>
+
+			<div class="regua" style="background-color: hsl(348, 100%, 61%);"></div>
+			<div class="regua" id="reguaRoxa" style="background-color: #DB5AE9; visibility: hidden;;margin-top: -1.5rem;"></div>
+			<div class="regua" id="reguaVerde" style="background-color: hsl(141, 53%, 53%); margin-top: -1.5rem;"></div>
+
+			<div class="regua" id="posPontuacao" style="float: left;"></div>
+		</div>
+	</section>
+  </body>
+
+	<!-- Bulma -->
+		<!-- Font Awesome -->
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+	<!-- Anime JS -->
+	<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+
+	<!-- Javascript -->
+	<script src="js/main.js"></script>
+	<script src="js/calculadora.js"></script>
+	
+
+</html>

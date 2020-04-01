@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
    
 	<title>Calculadora de Cluster MEJ | No Bugs</title>
-	<link rel="icon" href="..\imagens\Proibido_Branco@0.5x.png" type="image/x-icon">
+	<link rel="icon" href="Proibido_Branco@0.5x.png" type="image/x-icon">
 
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="sass/style.css">
@@ -22,7 +22,7 @@
 	<nav class="navbar is-light" role="navigation" aria-label="main navigation">
 		<div class="navbar-brand">
 		  <a class="navbar-item"  href="https://nobugs.com.br">
-			<img class="navbar-imagem" src="../imagens/Proibido_Azul@0.5x.png" alt="Desevolvido por No Bugs">
+			<img class="navbar-imagem" src="Logo_Master_Azul _Transparente@0.5x.png" alt="Desevolvido por No Bugs">
 		  </a>
 		</div>
 	</nav>
@@ -35,8 +35,6 @@
 					<input class="input" type="text" id="ejinput" placeholder="Qual o nome da sua EJ?">
 				</div>
 
-				
-
 				<div class="control">
 					<a class="button is-info" id="salvarNomeEj">
 						salvar
@@ -44,9 +42,8 @@
 				</div>
 
 				<div>
-					
 
-					<form action="" id="metasForm" style="margin-left: 3rem;">
+					<form id="metasForm" style="margin-left: 3rem;">
 						<p style="float: left; text-align: center;">Qual a meta de cluster da EJ?</p>
 						<div class="control">
 							<label class="radio">
@@ -57,36 +54,32 @@
 							Cluster 1
 							</label>
 							<label class="radio">
-							<input type="radio" name="foobar" >
+							<input type="radio" id="cluster2" name="foobar" >
 							Cluster 2
 							</label>
 							<label class="radio">
-								<input type="radio" name="foobar" >
+								<input type="radio" id="cluster3" name="foobar" >
 								Cluster 3
 							</label>
 							<label class="radio">
-								<input type="radio" name="foobar" >
+								<input type="radio" id="cluster4" name="foobar" >
 								Cluster 4
 							</label>
 							<label class="radio">
-								<input type="radio" name="foobar" >
+								<input type="radio" id="cluster5" name="foobar" >
 								Cluster 5
 							</label>
-
 							<label class="radio">
 								<input type="radio" id="inputMetaRadio" name="foobar" >
 								Pontos
 							</label>
-							<input class="input" type="text" id="inputMeta" disabled style="height: 1.5rem; width: 8rem;" placeholder="e.g 291070.12">
+							<input class="input" type="number" id="inputMeta" autocomplete="off" disabled style="height: 1.5rem; width: 8rem;" placeholder="e.g 291070.12">
 						</div>
 					</form>
-
 
 				</div>
 
 			</div>
-
-			
 
 			<div class="container" id="containerNomeej" style="visibility: hidden; text-align: center;">
 				<h2 class="nomeEJ" id="nomeej">EJ</h2>
@@ -96,7 +89,6 @@
 				</div>
 			</div>
 		</div>
-
 
 	</section>
 
@@ -180,45 +172,17 @@
 							</div>
 						</div>
 
-
-						<!-- <footer class="card-footer">
-						  <a href="#" id="a" class="card-footer-item">Save</a>
-						  <a href="#" class="card-footer-item">Edit</a>
-						  <a href="#" class="card-footer-item">Delete</a>
-						</footer> -->
 					</div>
-<!-- 
-					<div class="card" style="margin-top: 1.3rem;">
 
-						<div class="card-content">
-							<div class="content" style="text-align: center;">
-
-								<div class="columns">
-									<div class="row">
-										<div class="control" >
-											<input class="input" type="text" id="ejinput" placeholder="Cluster">
-										</div>
-									</div>
-
-									<div class="row">
-										<div class="control" >
-											<input class="input" type="text" id="ejinput" placeholder="Qual o nome da sua EJ?">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> -->
 				</div>
 
 			</div>
 		</div>
 	</section>
+
 	<dir style="padding-top: 3rem;"></dir>
 	<section style="margin-left: 5%; margin-right: 5%">
 
-
-	
 		<div class="container numeroInicadorRegua">
 			<div class="indicadorRegua" style="margin-left: -1%; float: left;"><p>0</p></div>
 			<div class="indicadorRegua" style="margin-left: 17%; float: left;">1</div>
@@ -228,12 +192,13 @@
 			<div class="indicadorRegua" style="margin-left: 99%;">5</div>
 
 			<div class="regua" style="background-color: hsl(348, 100%, 61%);"></div>
-			<div class="regua" id="reguaRoxa" style="background-color: #DB5AE9; visibility: hidden;;margin-top: -1.5rem;"></div>
+			<div class="regua" id="reguaRoxa" style="background-color: #DB5AE9; visibility: hidden; margin-top: -1.5rem;"></div>
 			<div class="regua" id="reguaVerde" style="background-color: hsl(141, 53%, 53%); margin-top: -1.5rem;"></div>
 
 			<div class="regua" id="posPontuacao" style="float: left;"></div>
 		</div>
 	</section>
+
   </body>
 
 	<!-- Bulma -->
@@ -250,5 +215,4 @@
 	<script src="js/main.js"></script>
 	<script src="js/calculadora.js"></script>
 	
-
 </html>

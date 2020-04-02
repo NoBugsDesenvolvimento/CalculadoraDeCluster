@@ -1,22 +1,22 @@
-/* NAVBAR */
-body {
-    // background-color: hsl(204, 86%, 53%);
-    height: 100vh;
-    
-}
-
-html {
-    overflow: hidden;
-}
-
-#element::-webkit-scrollbar {
-    display: none;
-}
 
 .navbar-imagem {
-    $navbar-imagem_width: 1.8rem;
-    height: 1.8rem;
-    width: 1.8rem;
+    height: auto;
+    width: 35%;
+    text-align: center;
+}
+
+.centerMeio{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerMeio:hover{    
+    height: auto;
+    width: 25%;
 }
 
 .nomeEJ {
@@ -84,7 +84,7 @@ html {
 .clusterIndicador {
     font-family: poppins;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 70px;
     text-align: center;
     color: #FFB300;
     display: inline;
@@ -95,4 +95,10 @@ html {
 .clusterIndicadorIcon {
     font-size: 2.5rem;
     visibility: hidden;
+}
+
+.metaEjTexto{
+    font-family: poppins;
+    font-weight: 500;
+    text-align: center;
 }

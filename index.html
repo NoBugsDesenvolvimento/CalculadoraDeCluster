@@ -12,26 +12,56 @@
 
 	<!-- Bulma -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+	<!-- Bulma Extension-->
+	<link rel="stylesheet" href="css/bulma-radio-checkbox.min.css">
 	
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	
+
+<style>
+
+
+
+html, body {
+	/* background-color: hsl(204, 86%, 53%); */
+	/* background-color: hsl(204, 27%, 18%); */
+    height: 100vh;
+	width: 100vw;
+
+    /* margin: 0; */
+    /* padding: 0; */
+}
+.dark-mode {
+	background-color: hsl(204, 27%, 18%);
+  /* color: white; */
+}
+
+
+</style>
   </head>
   <body>
-
+	
 	<nav class="navbar is-light" role="navigation" aria-label="main navigation">
-		<div class="navbar-brand">
-		  <a class="navbar-item"  href="https://nobugs.com.br">
+
+		<a class="centerMeio" href="https://nobugs.com.br">
 			<img class="navbar-imagem" src="Logo_Master_Azul _Transparente@0.5x.png" alt="Desevolvido por No Bugs">
 		  </a>
+		<div class="navbar-brand" style="margin-left: 3rem;">
+			<a href="https://www.facebook.com/NoBugsUFV" target="_blank" class="icon is-large has-text-info"><i class="fab fa-facebook-f "></i></a>
+			<a href="https://www.instagram.com/nobugsufv/" target="_blank" class="icon is-large has-text-info"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.linkedin.com/company/no-bugs---empresa-j-nior-de-inform-tica/?viewAsMember=true" target="_blank" class="icon is-large has-text-info "><i class="fab fa-linkedin"></i></a>
+
 		</div>
 	</nav>
 
+
+	
 	<section class="section">
 		<!-- Nome EJ-->
-		<div class="container">
+		<div class="container" style="visibility: hidden;">
 			<div class="field has-addons" id="ejinputContainer">
-				<div class="control" >
+				<!-- <div class="control" >
 					<input class="input" type="text" id="ejinput" placeholder="Qual o nome da sua EJ?">
 				</div>
 
@@ -39,11 +69,11 @@
 					<a class="button is-info" id="salvarNomeEj">
 						salvar
 					</a>
-				</div>
+				</div> -->
 
 				<div>
 
-					<form id="metasForm" style="margin-left: 3rem;">
+					<!-- <form id="metasForm" style="margin-left: 3rem;">
 						<p style="float: left; text-align: center;">Qual a meta de cluster da EJ?</p>
 						<div class="control">
 							<label class="radio">
@@ -75,7 +105,7 @@
 							</label>
 							<input class="input" type="number" id="inputMeta" autocomplete="off" disabled style="height: 1.5rem; width: 8rem;" placeholder="e.g 291070.12">
 						</div>
-					</form>
+					</form> -->
 
 				</div>
 
@@ -91,6 +121,8 @@
 		</div>
 
 	</section>
+
+
 
 	<section>
 		<div class="container">
@@ -132,6 +164,88 @@
 					</div>
 				</div>
 
+
+				<div class="column">
+					<div class="card">
+						<header class="card-header">
+						  <p class="card-header-title is-centered suaEJtitle" style="color: #5D78FF;" id="tituloej"  >SUA EMPRESA</p>
+						</header>
+						<div class="card-content">
+							<div class="content" style="text-align: center;">
+								<p>Cluster</p>
+								<p class="clusterIndicador" id="cluster">0</p>
+								<span class="icon clusterIndicadorIcon" id="clusterIndicadorIconVermelho"><i class="fas fa-angle-down " aria-hidden="true"></i></span>
+
+								<span class="icon clusterIndicadorIcon" id="clusterIndicadorIconVerde"><i class="fas fa-angle-up" aria-hidden="true"></i></span>
+
+								<p style="font-weight: bold;" id="totalPontos">0</p>
+								<p style="margin-top: -1rem;">Pontos</p>
+
+								<p id="metarClusterval">META</p>
+
+							</div>
+						</div>
+						<footer class="card-footer" id="footerCardSuaEJ">
+							<div class="card-footer-item">
+								<div class="control" >
+									<input class="input" type="text" id="ejinput" autocomplete="off" placeholder="Qual o nome da sua EJ?">
+								</div>
+							</div>
+							<a class="card-footer-item" id="editarMeta">Editar Meta</a>
+						</footer>
+
+					</div>
+
+					<div class="card" id="cardEdicao" style="display: none;">
+						
+						<div class="card-content">
+							<p class="metaEjTexto" >QUAL A META DE CLUSTER DA EJ?</p>
+
+							<form id="metasForm">
+								<div class="control">
+									<label class="radio">
+										<input type="radio" id="cluster1" name="foobar" >
+										Cluster 1
+									</label>
+									<label class="radio">
+									<input type="radio" id="cluster2" name="foobar" >
+									Cluster 2
+									</label>
+									<label class="radio">
+										<input type="radio" id="cluster3" name="foobar" >
+										Cluster 3
+									</label>
+									<label class="radio">
+										<input type="radio" id="cluster4" name="foobar" >
+										Cluster 4
+									</label>
+									<label class="radio">
+										<input type="radio" id="cluster5" name="foobar" >
+										Cluster 5
+									</label>
+									<label class="radio">
+										<input type="radio" id="nenhuma" name="foobar" checked>
+										Nenhuma
+									<label class="radio">
+									<label class="radio">
+										<input type="radio" id="inputMetaRadio" name="foobar" >
+										Pontos
+									</label>
+									<input class="input" type="number" id="inputMeta" autocomplete="off" disabled style="height: 1.5rem; width: 8rem;" placeholder="e.g 291070.12">
+								</div>
+							</form>
+						</div>
+
+						<footer class="card-footer">
+							<div class="card-footer-item" id="salvarMeta">
+								<a>Salvar</a>
+							</div>
+						</footer>
+
+					</div>
+
+				</div>
+
 				<div class="column is-one-quarter">
 					<div class="box">
 						<article class="media">
@@ -152,29 +266,19 @@
 							</div>
 						</article>
 					</div>
-				</div>
 
-				<div class="column">
-					<div class="card">
-						<header class="card-header">
-						  <p class="card-header-title is-centered suaEJtitle" style="color: #5D78FF;" id="tituloej" >SUA EMPRESA</p>
-						</header>
-						<div class="card-content">
-							<div class="content" style="text-align: center;">
-								<p>Cluster</p>
-								<p class="clusterIndicador" id="cluster">4</p>
-								<span class="icon clusterIndicadorIcon" id="clusterIndicadorIconVermelho"><i class="fas fa-angle-down " aria-hidden="true"></i></span>
-
-								<span class="icon clusterIndicadorIcon" id="clusterIndicadorIconVerde"><i class="fas fa-angle-up" aria-hidden="true"></i></span>
-
-								<p style="font-weight: bold;" id="totalPontos">0</p>
-								<p style="margin-top: -1rem;">Pontos</p>
+					<div class="box">
+						<article class="media">
+							<div class="media-content">
+								<p class="legendaPontosCluster">meta Cluster</p>
+								<p class="pontosCluster" id="pontosParaMeta" style="color: #DB5AE9;">0</p>
+								<p class="legendaPontosCluster">pontos</p>
 							</div>
-						</div>
-
+						</article>
 					</div>
-
 				</div>
+
+
 
 			</div>
 		</div>
@@ -199,12 +303,15 @@
 		</div>
 	</section>
 
+	<dir style="padding-bottom: 3rem;"></dir>
+
   </body>
 
 	<!-- Bulma -->
 		<!-- Font Awesome -->
 		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
+	
 	<!-- Jquery -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 

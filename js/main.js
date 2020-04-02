@@ -1,3 +1,4 @@
+
 $('#salvarNomeEj').click( function () {
     if (($('#ejinput').val()) != '') {
         $("#nomeej").text($('#ejinput').val().toUpperCase());
@@ -10,17 +11,18 @@ $('#salvarNomeEj').click( function () {
     }
 });
 
-$('#ejinput').on('keypress',function(e) {
-    if(e.which == 13) {
-        if (($(this).val()) != '') {
-            $("#nomeej").text($(this).val().toUpperCase());
-            $("#ejinputContainer").css('visibility', 'hidden');
-            $('#containerNomeej').css('visibility', 'visible');
+$('#ejinput').keyup(function() {
 
-            ClusterMeta();
-        }
+    if (($(this).val()) != '') {
+        $("#tituloej").text($(this).val().toUpperCase());
+    } else{
+        $("#tituloej").text("SUA EMPRESA");
     }
+
+
 });
+
+
 
 $("#editarej").click(function () {
     $('#containerNomeej').css('visibility', 'hidden');
@@ -36,41 +38,35 @@ $(":radio").change(function() {
     }
 });
 
+$("#salvarMeta").click( function() {
+    $("#cardEdicao").css("display", "none");
+    $("#footerCardSuaEJ").css("display", "inherit");
+    
+    ClusterMeta();
+});
 
-function ClusterMeta() {
-    var form = document.querySelector("#metasForm");
-
-    if (form.cluster1.checked) {
-        localStorage.setItem("MetaCluster", "20%");
-    } else if (form.cluster2.checked) {
-        localStorage.setItem("MetaCluster", "40%");
-    } else if (form.cluster3.checked) {
-        localStorage.setItem("MetaCluster", "60%");
-    } else if (form.cluster4.checked) {
-        localStorage.setItem("MetaCluster", "80%");
-    } else if (form.cluster5.checked) {
-        localStorage.setItem("MetaCluster", "100%");
-    }
+$("#editarMeta").click( function() {
+    $("#footerCardSuaEJ").css("display", "none");
+    $("#cardEdicao").css("display", "inherit");
+});
 
 
-    var meta = localStorage.getItem("MetaCluster"); 
 
 
-    anime({
-        targets: '#reguaVerde',
-        width: "0%",
-        duration: 1500,
-        easing: 'easeInOutSine',
-    })
+// $("#dark-mode").click(function (){
 
-    $('#reguaRoxa').css('visibility', 'visible');
+//     $("#dark-mode").css("visibility", "hidden");
+//     $("#light-mode").css("visibility", "visible");
+//     $("body").css("background-color", "hsl(204, 86%, 53%)");
+// });
+
+// $("#light-mode").click(function (){
+
+//     $("#light-mode").css("visibility", "hidden");
+//     $("#dark-mode").css("visibility", "visible");
+
+//     $("body").css("background-color", "hsl(204, 27%, 18%)");
+// });
 
 
-    anime({
-        targets: '#reguaRoxa',
-        width: meta,
-        duration: 1500,
-        easing: 'easeInOutSine',
-    })
 
-}

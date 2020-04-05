@@ -1,4 +1,5 @@
 
+
 $('#salvarNomeEj').click( function () {
     if (($('#ejinput').val()) != '') {
         $("#nomeej").text($('#ejinput').val().toUpperCase());
@@ -70,3 +71,29 @@ $("#editarMeta").click( function() {
 
 
 
+$("#share").jsSocials({
+    shares: ["twitter", "facebook", "linkedin", "whatsapp"]
+});
+
+
+/* Open */
+function openNav() {
+    document.getElementById("modal-Meta").style.display = "block";
+}
+  
+  /* Close */
+function closeNav() {
+    document.getElementById("modal-Meta").style.display = "none";
+}
+
+function SelecionarMeta(id){
+    $("#1meta").removeClass('is-warning').addClass('is-primary');
+    $("#2meta").removeClass('is-warning').addClass('is-primary');
+    $("#3meta").removeClass('is-warning').addClass('is-primary');
+    $("#4meta").removeClass('is-warning').addClass('is-primary');
+    $("#5meta").removeClass('is-warning').addClass('is-primary');
+
+    $("#"+id).removeClass('is-primary').addClass('is-warning');
+
+    localStorage.setItem("metaid", id);
+}

@@ -8,7 +8,7 @@
   text-align: center;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 4rem;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -16,7 +16,7 @@
 
 .centerMeio:hover {
   height: auto;
-  width: 25%;
+  width: 40%;
 }
 
 .nomeEJ {
@@ -62,17 +62,10 @@
   text-align: center;
 }
 
-.suaEJtitle {
-  font-family: poppins;
-  font-weight: bold;
-  font-size: 18px;
-  color: #5D78FF;
-}
-
 .clusterIndicador {
   font-family: poppins;
   font-weight: bold;
-  font-size: 70px;
+  font-size: 5rem;
   text-align: center;
   color: #FFB300;
   display: inline;
@@ -88,5 +81,67 @@
   font-family: poppins;
   font-weight: 500;
   text-align: center;
+}
+
+.loader-wrapper {
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-dados-ej {
+  font-family: poppins;
+  border-radius: 6px;
+  height: 510px;
+}
+
+.card-field-dados-ej {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+p.titulos {
+  color: #05c46b;
+  font-weight: bold;
+  text-align: center;
+}
+
+.definir-meta {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.card-ej-info {
+  font-family: poppins;
+  border-radius: 6px;
+  height: 510px;
+}
+
+p.titulo-ej {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 25px;
+  color: #5D78FF;
+}
+
+p.cluster-label {
+  font-family: poppins;
+  font-weight: bold;
+}
+
+h4.compartilhe {
+  text-align: center;
+  font-weight: bold;
+  font-family: poppins;
+  font-size: 2rem;
+  margin-top: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

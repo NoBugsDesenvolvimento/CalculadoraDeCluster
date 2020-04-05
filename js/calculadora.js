@@ -189,35 +189,36 @@ function MudarRegua(elemento, ej) {
 
 
 function ClusterMeta() {
-    var form = document.querySelector("#metasForm");
+    // var form = document.querySelector("#metasForm");
     var pontosMeta = localStorage.getItem("pontuacao"); 
+    var id = localStorage.getItem("metaid"); 
+    console.log(id);
 
-
-    if (form.cluster1.checked) {
+    if (id == "1meta") {
         localStorage.setItem("MetaCluster", "20%");
         $("#metarClusterval").text("Cluster 1");
         $("#pontosParaMeta").text(Cluster_1 - pontosMeta);
         localStorage.setItem("MetaPontuacao", Cluster_1);
 
-    } else if (form.cluster2.checked) {
+    } else if (id == "2meta") {
         localStorage.setItem("MetaCluster", "40%");
         $("#metarClusterval").text("Cluster 2");
         $("#pontosParaMeta").text(Cluster_2 - pontosMeta);
         localStorage.setItem("MetaPontuacao", Cluster_2);
 
-    } else if (form.cluster3.checked) {
+    } else if (id == "3meta") {
         localStorage.setItem("MetaCluster", "60%");
         $("#metarClusterval").text("Cluster 3");
         $("#pontosParaMeta").text(Cluster_3 - pontosMeta);
         localStorage.setItem("MetaPontuacao", Cluster_3);
 
-    } else if (form.cluster4.checked) {
+    } else if (id == "4meta") {
         localStorage.setItem("MetaCluster", "80%");
         $("#metarClusterval").text("Cluster 4");
         $("#pontosParaMeta").text(Cluster_4 - pontosMeta);
         localStorage.setItem("MetaPontuacao", Cluster_4);
 
-    } else if (form.cluster5.checked) {
+    } else if (id == "5meta") {
         localStorage.setItem("MetaCluster", "100%");
         $("#metarClusterval").text("Cluster 5");
         $("#pontosParaMeta").text(Cluster_5 - pontosMeta);

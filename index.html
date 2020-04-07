@@ -66,29 +66,41 @@ html, body {
 								
 								<div class="field" style="text-align: center; margin-top: 3rem;">
 									<label class="label">Total de Membros</label>
-									<div class="control">
-									<input class="input" type="number" style="text-align: center;" id="membros" autocomplete="off" placeholder="e.g 26">
+									<div class="control has-icons-left has-icons-right">
+									<input class="input" type="number" style="text-align: center;" id="membros" min="0" autocomplete="off" placeholder="e.g 26">
+									<span class="icon is-small is-left">
+										<i class="fas fa-users"></i>
+									</span>	
 									</div>
 								</div>
 
 								<div class="field" style="text-align: center;">
 									<label class="label">Faturamento</label>
-									<div class="control">
+									<div class="control has-icons-left has-icons-right">
 									<input class="input" type="number" style="text-align: center;" id="faturamento" autocomplete="off" placeholder="e.g 47098,89">
+									<span class="icon is-small is-left">
+										<i class="fas fa-dollar-sign"></i>
+									</span>	
 									</div>
 								</div>
-
+								
 								<div class="field" style="text-align: center;">
 									<label class="label">Membros Execultando</label>
-									<div class="control">
-									<input class="input" type="number" style="text-align: center;" id="membrosExecultando" autocomplete="off" placeholder="e.g 68">
+									<div class="control has-icons-left has-icons-right">
+									<input class="input" type="number" style="text-align: center;" id="membrosExecultando" max="100" min="0" autocomplete="off" placeholder="e.g 68">
+									<span class="icon is-small is-left">
+										<i class="fas fa-percent"></i>
+									</span>
 									</div>
 								</div>
-
+								
 								<div class="field" style="text-align: center;">
 									<label class="label">NPS</label>
-									<div class="control">
+									<div class="control has-icons-left has-icons-right">
 									<input class="input" type="number" style="text-align: center;" id="nps" max="100" min="-100" autocomplete="off" placeholder="e.g 70">
+									<span class="icon is-small is-left">
+										<i class="fas fa-signal"></i>
+									</span>
 									</div>
 								</div>
 							</form>
@@ -217,7 +229,7 @@ html, body {
 
 								<div id="sem-meta">
 									<p class="cluster-label" style="text-align: center; text-transform: uppercase; color: #DB5AE9;">Quer comparar sua situação atual com sua meta?</p>
-									<button class="button is-link is-fullwidth" onclick="openNav()">Definir Meta</button>
+									<button class="button is-link is-fullwidth" style="margin-top: 1rem;" onclick="openNav()">Definir Meta</button>
 								</div>
 
 								<div id="tem-meta" style="display: none;">

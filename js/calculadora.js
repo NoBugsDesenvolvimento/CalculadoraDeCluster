@@ -201,7 +201,7 @@ function ClusterMeta() {
     if (metaId== "1meta") {
         localStorage.setItem("MetaCluster", "20%");
         $("#metarClusterval").text("Cluster 1");
-        $("#pontosParaMeta").text(1);
+        $("#pontosParaMeta").text(Cluster_1);
         localStorage.setItem("MetaPontuacao", Cluster_1);
 
     } else if (metaId== "2meta") {
@@ -228,26 +228,7 @@ function ClusterMeta() {
         $("#pontosParaMeta").text(Cluster_4 - pontuacao);
         localStorage.setItem("MetaPontuacao", Cluster_4);
 
-    } else if (form.nenhuma.checked) {
-        localStorage.setItem("MetaCluster", "0%");
-        localStorage.setItem("MetaPontuacao", 0);
-        $("#metarClusterval").text("");
-        $("#pontosParaMeta").text("0");
-        
-
-        anime({
-            targets: '#reguaVerde',
-            width: "100%",
-            duration: 1500,
-            easing: 'easeInOutSine',
-        })
-
-        $('#reguaRoxa').css('visibility', 'hidden');
-
-        return
-
     } 
-
 
     var MetaCluster = localStorage.getItem("MetaCluster"); 
 
@@ -329,4 +310,23 @@ function ClusterParaPontuacao(Cluster) {
         default:
             return 0;
     }   
+}
+
+function RemoverMeta(){
+
+    $("#tem-meta").css("display", "none");
+    $("#sem-meta").css("display", "inherit");
+
+    localStorage.setItem("MetaCluster", "0%");
+    localStorage.setItem("MetaPontuacao", 0);
+    anime({
+        targets: '#reguaVerde',
+        width: "100%",
+        duration: 1500,
+        easing: 'easeInOutSine',
+    })
+
+    $('#reguaRoxa').css('visibility', 'hidden');
+
+    closeNav();
 }

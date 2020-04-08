@@ -11,7 +11,7 @@
 	<!-- Bulma -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 
-
+	
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	
@@ -126,7 +126,7 @@ html, body {
 								<p style="margin-top: -1rem;">Pontos</p>
 
 								<div>
-									<button class="button is-fullwidth" style="margin-top: 2rem;">Fundamentos do Cluster</button>
+									<button class="button is-fullwidth"style="margin-top: 2rem;"><a href="https://drive.google.com/file/d/14DC9hXrA_Ayv7MmWUw2tE3SekomfR3Z1/view" target="_blank">Fundamentos do Cluster</a></button>
 									<h4 style="margin-top: 2rem;">Conheça a No Bugs</h4>
 
 									<div class="loader-wrapper" style="font-size: 2rem; margin-top: 1rem;">
@@ -236,6 +236,8 @@ html, body {
 									<p class="legendaPontosCluster">meta Cluster</p>
 									<p class="pontosCluster" id="pontosParaMeta" style="color: #DB5AE9;">0</p>
 									<p class="legendaPontosCluster">pontos</p>
+									<button class="button is-link is-fullwidth" style="margin-top: 1rem;" onclick="openNav()">Editar Meta</button>
+
 								</div>
 							</div>
 						</article>
@@ -267,16 +269,39 @@ html, body {
 		</div>
 	</section>
 
-	<!-- <section>
-		<h4 class="compartilhe">Gostou da Calculadora de Cluster?<br> Então compartilhe!</h4>
+	<section>
+		<!-- <h4 class="compartilhe">Gostou da Calculadora de Cluster?<br> Então compartilhe!</h4>
 
 		<div id="share"></div>
 		<div class="loader-wrapper" style="font-size: 2rem; margin-top: 2rem;">
 			<a href="https://www.facebook.com/NoBugsUFV" target="_blank" class="icon is-large"><i class="fab fa-facebook-f "></i></a>
 			<a href="https://www.instagram.com/nobugsufv/" target="_blank" class="icon is-large"><i class="fab fa-instagram"></i></a>
 			<a href="https://www.linkedin.com/company/no-bugs---empresa-j-nior-de-inform-tica/?viewAsMember=true" target="_blank" class="icon is-large"><i class="fab fa-linkedin"></i></a>
+		</div> -->
+
+		<div class="field has-addons" style="margin-left: 60%; margin-right: 1rem; float: left;">
+			<p class="control">
+			  <button class="button is-rounded">
+				<a href="https://forms.gle/1sKSpS1sKiewN8Gc7" target="_black">
+					<span class="icon is-small">
+				  <i class="fas fa-star"></i>
+				</span>
+				<span>Avalie a Calculadora</span> </a>
+			  </button>
+			</p>
 		</div>
-	</section> -->
+
+		<div class="field has-addons" style="margin-top: 3rem;">
+			<p class="control">
+			  <button class="button is-rounded">
+				<span class="icon is-small">
+				  <i class="fas fa-bug"></i>
+				</span>
+				<span>Reportar Erro</span>
+			  </button>
+			</p>
+		</div>
+	</section>
 
 	<dir style="padding-bottom: 3rem;"></dir>
 
@@ -305,7 +330,7 @@ html, body {
 				</div>
 				<footer class="card-footer">
 				  <a href="#" onclick="ClusterMeta()" class="card-footer-item">Salvar</a>
-				  <a href="#" class="card-footer-item">Remover Meta</a>
+				  <a href="#" onclick="RemoverMeta()" class="card-footer-item">Remover Meta</a>
 				</footer>
 			  </div>
 

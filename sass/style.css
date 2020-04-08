@@ -137,11 +137,18 @@ p.cluster-label {
   font-weight: bold;
 }
 
-h4.compartilhe {
+h4.modal-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: poppins;
+  color: #5D78FF;
+}
+
+h4.modal-label {
   text-align: center;
   font-weight: bold;
   font-family: poppins;
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin-top: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

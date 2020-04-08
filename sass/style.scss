@@ -3,6 +3,9 @@
 
 $defaultFont: poppins;
 
+// cores
+$azul: #5D78FF;
+
 .navbar-imagem {
     height: auto;
     width: 35%;
@@ -158,11 +161,21 @@ p.cluster-label{
 }
 
 
-h4.compartilhe{
+
+// Modal
+
+h4.modal-title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: $defaultFont;
+
+    color: $azul;
+}
+h4.modal-label{
     text-align: center;
     font-weight: bold;
     font-family: $defaultFont;
-    font-size: 2rem;
+    font-size: 1.2rem;
 
     margin-top: 1.5rem;
 }

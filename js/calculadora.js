@@ -251,18 +251,10 @@ function ClusterMeta() {
         easing: 'easeInOutSine',
     })
 
-    // Vericar se a meta foi alcançada
-    var MetaPontuacao = Number(localStorage.getItem("MetaPontuacao")); 
-
-    if (((pontuacao - MetaPontuacao) <= 0) && pontuacao != 0) {
-        $("#pontosParaMeta").text("Meta Alcançada");
-        $("#pontosParaMeta").css("font-size", "32px");
-    }else {
-        $("#pontosParaMeta").css("font-size", "40px");
-    }
-    
     $("#sem-meta").css("display", "none");
     $("#tem-meta").css("display", "inherit");
+
+    VerificarMetaAlcancada();
     closeNav();
 
 

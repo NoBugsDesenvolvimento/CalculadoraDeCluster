@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0 , minimum-scale=1.0 , maximum-scale=1.0" />   
+	<title>Calculadora de Cluster MEJ | No Bugs</title>
+	<link rel="icon" href="Proibido_Branco@0.5x.png" type="image/x-icon">
+	
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="sass/style.css">
+	<!-- Bulma -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+	
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	
+	
+	<style>
+		
+		
+		
+		html, body {
+			/* background-color: hsl(204, 86%, 53%); */
+			background-color: hsl(204, 27%, 18%);
+			/* background-image: url("Rodape_05.png"); */
+			/* background-image: url("Azul-Cabecalho_01.png"); */
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+			height: auto;
+			width: auto;
+			overflow:auto;
+			/* margin: 0; */
+			/* padding: 0; */
+		}
+		.dark-mode {
+			background-color: hsl(204, 27%, 18%);
+			/* color: white; */
+		}
+		
+		
+	</style>
+</head>
+
+
+<body>
+	<!-- Inicio do main  -->
+	<div id="main">
+		
+		<section style="margin-top: 7rem;">
+			
+			<!-- Logo No Bugs Header -->
+			<div>
+				<a class="centerMeio" href="https://nobugs.com.br" >
+					<img class="navbar-imagem" src="Logo_Master_Branco_Transparente.png" alt="Desevolvido por No Bugs">
+				</a>
+			</div>
+			
+			<!-- colunas principais -->
+			<div class="container">
+				<div class="columns">
+					<div class="column is-one-quarter">
+						<div class="card-dados-ej card">
+							<div class="card-content">	
+								<p class="title titulos">DADOS DA EJ</p>
+								<form id="form">
+									
+									<div class="field" style="text-align: center; margin-top: 3rem;">
+										<label class="label">Total de Membros</label>
+										<div class="control has-icons-left has-icons-right">
+											<input class="input" type="number" style="text-align: center;" id="membros" min="0" autocomplete="off" placeholder="e.g 26">
+											<span class="icon is-small is-left">
+												<i class="fas fa-users"></i>
+											</span>	
+										</div>
+									</div>
+									
+									<div class="field" style="text-align: center;">
+										<label class="label">Faturamento</label>
+										<div class="control has-icons-left has-icons-right">
+											<input class="input" type="number" style="text-align: center;" id="faturamento" autocomplete="off" placeholder="e.g 47098,89">
+											<span class="icon is-small is-left">
+												<i class="fas fa-dollar-sign"></i>
+											</span>	
+										</div>
+									</div>
+									
+									<div class="field" style="text-align: center;">
+										<label class="label">Membros Execultando</label>
+										<div class="control has-icons-left has-icons-right">
+											<input class="input" type="number" style="text-align: center;" id="membrosExecultando" max="100" min="0" autocomplete="off" placeholder="e.g 68">
+											<span class="icon is-small is-left">
+												<i class="fas fa-percent"></i>
+											</span>
+										</div>
+									</div>
+									
+									<div class="field" style="text-align: center;">
+										<label class="label">NPS</label>
+										<div class="control has-icons-left has-icons-right">
+											<input class="input" type="number" style="text-align: center;" id="nps" max="100" min="-100" autocomplete="off" placeholder="e.g 70">
+											<span class="icon is-small is-left">
+												<i class="fas fa-signal"></i>
+											</span>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					
+					<div class="column">
+						<div class="card card-ej-info">
+							<header class="card-header">
+								<p class="card-header-title is-centered titulo-ej" style="color: #5D78FF;" id="tituloej">SUA EMPRESA</p>
+							</header>
+							<div class="card-content">
+								<div class="content" style="text-align: center;">
+									
+									<p class="clusterIndicador" id="cluster">0</p>
+									<span class="icon clusterIndicadorIcon" id="clusterIndicadorIconVermelho"><i class="fas fa-angle-down " aria-hidden="true"></i></span>
+									<span class="icon clusterIndicadorIcon" id="clusterIndicadorIconVerde"><i class="fas fa-angle-up" aria-hidden="true"></i></span>
+									
+									<p class="cluster-label">CLUSTER</p>
+									<p style="font-weight: bold;" id="totalPontos">0</p>
+									<p style="margin-top: -1rem;">Pontos</p>
+									
+									<div>
+										<button class="button is-fullwidth"style="margin-top: 2rem;"><a href="https://drive.google.com/file/d/14DC9hXrA_Ayv7MmWUw2tE3SekomfR3Z1/view" target="_blank">Fundamentos do Cluster</a></button>
+										<h4 style="margin-top: 2rem;">Conheça a No Bugs</h4>
+										
+										<div class="loader-wrapper" style="font-size: 2rem; margin-top: 1rem;">
+											<a href="https://www.facebook.com/NoBugsUFV" target="_blank" class="icon is-large"><i class="fab fa-facebook-f "></i></a>
+											<a href="https://www.instagram.com/nobugsufv/" target="_blank" class="icon is-large"><i class="fab fa-instagram"></i></a>
+											<a href="https://www.linkedin.com/company/no-bugs---empresa-j-nior-de-inform-tica/?viewAsMember=true" target="_blank" class="icon is-large"><i class="fab fa-linkedin"></i></a>
+											<a href="https://www.nobugs.com.br" target="_blank" class="icon is-large"><i class="fas fa-globe"></i></a>
+											
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="column is-one-quarter" style="height: 510px; margin: auto;">
+						<div class="box">
+							<article class="media">
+								<div class="media-content">
+									<p class="legendaPontosCluster">proximo Cluster</p>
+									<p class="pontosCluster" id="ClusterProximo" style="color: hsl(141, 53%, 53%);">0</p>
+									<p class="legendaPontosCluster">pontos</p>
+								</div>
+							</article>
+						</div>
+						
+						<div class="box">
+							<article class="media">
+								<div class="media-content">
+									<p class="legendaPontosCluster">ultimo Cluster</p>
+									<p class="pontosCluster" id="ClusterAnterior" style="color: hsl(348, 100%, 61%);">0</p>
+									<p class="legendaPontosCluster">pontos</p>
+								</div>
+							</article>
+						</div>
+						
+						<div class="box">
+							<article class="media">
+								<div class="media-content">
+									
+									<div id="sem-meta">
+										<p class="cluster-label" style="text-align: center; text-transform: uppercase; color: #DB5AE9;">Quer comparar sua situação atual com sua meta?</p>
+										<button class="button is-link is-fullwidth" style="margin-top: 1rem;" onclick="openNav()">Definir Meta</button>
+									</div>
+									
+									<div id="tem-meta" style="display: none;">
+										<p class="legendaPontosCluster">meta Cluster</p>
+										<p class="pontosCluster" id="pontosParaMeta" style="color: #DB5AE9;">0</p>
+										<p class="legendaPontosCluster">pontos</p>
+										<button class="button is-link is-fullwidth" style="margin-top: 1rem;" onclick="openNav()">Editar Meta</button>
+										
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+
+		</section>
+		
+		<div style="padding-top: 3rem;"></div>
+		<section style="margin-left: 5%; margin-right: 5%">
+
+			<div class="container numeroInicadorRegua">
+				<div class="indicadorRegua" style="margin-left: -1%; float: left;"><p>0</p></div>
+				<div class="indicadorRegua" style="margin-left: 17%; float: left;">1</div>
+				<div class="indicadorRegua" style="margin-left: 17%; float: left;">2</div>
+				<div class="indicadorRegua" style="margin-left: 17%; float: left;">3</div>
+				<div class="indicadorRegua" style="margin-left: 17%; float: left;">4</div>
+				<div class="indicadorRegua" style="margin-left: 99%;">5</div>
+				
+				<div class="regua" style="background-color: hsl(348, 100%, 61%);"></div>
+				<div class="regua" id="reguaRoxa" style="background-color: #DB5AE9; visibility: hidden; margin-top: -1.5rem;"></div>
+				<div class="regua" id="reguaVerde" style="background-color: hsl(141, 53%, 53%); margin-top: -1.5rem;"></div>
+				
+				<div class="regua" id="posPontuacao" style="float: left;"></div>
+			</div>
+		</section>
+		
+		<!-- Botões auxiliares -->
+		<section style="display: grid;">
+			<div class="field has-addons" style="margin-left: 60%; margin-right: 1rem; float: left;">
+				<p class="control">
+					<button class="button is-rounded">
+						<a href="https://forms.gle/1sKSpS1sKiewN8Gc7" target="_black">
+							<span class="icon is-small">
+								<i class="fas fa-star"></i>
+							</span>
+							<span>Avalie a Calculadora</span></a>
+						</button>
+					</p>
+				</div>
+				
+				<div class="field has-addons" style="margin-top: 3rem;">
+					<p class="control">
+						<button class="button is-rounded">
+							<span class="icon is-small">
+								<i class="fas fa-bug"></i>
+							</span>
+							<span>Reportar Erro</span>
+						</button>
+					</p>
+				</div>
+		</section>
+			
+			<dir style="padding-bottom: 3rem;"></dir>
+			
+			<!-- Fim da main -->
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal is-active" id="modal-Meta" style="display: none;">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<div class="card" style=" margin-top: 5rem;">
+					<header class="card-header">
+						<h4 class="card-header-title is-centered modal-title">Qual a Meta de Cluster da EJ?</h4>
+					</header>
+					<div class="card-content">
+						<div class="content" style="text-align: center;">
+							<h4 class="modal-label">CLUSTER</h4>
+							<button class="button is-primary is-light" onclick="SelecionarMeta('1meta')" id="1meta" style="font-size: 1.5rem; font-family: poppins; font-weight: bold;">1</button>
+							<button class="button is-primary is-light" onclick="SelecionarMeta('2meta')" id="2meta" style="font-size: 1.5rem; font-family: poppins; font-weight: bold;">2</button>
+							<button class="button is-primary is-light" onclick="SelecionarMeta('3meta')" id="3meta" style="font-size: 1.5rem; font-family: poppins; font-weight: bold;">3</button>
+							<button class="button is-primary is-light" onclick="SelecionarMeta('4meta')" id="4meta" style="font-size: 1.5rem; font-family: poppins; font-weight: bold;">4</button>
+							<button class="button is-primary is-light" onclick="SelecionarMeta('5meta')" id="5meta" style="font-size: 1.5rem; font-family: poppins; font-weight: bold;">5</button>
+							
+						</div>
+
+						<div style="margin-bottom: 1rem;">
+							<h4 class="modal-label" style="margin-bottom: 0.5rem;">QUAL O NOME DA SUA EJ?</h4>
+							<input class="input is-rounded" type="text" id="nomeEjInput" placeholder="Nome da EJ">
+						</div>
+
+					</div>
+					<footer class="card-footer">
+						<a href="#" onclick="ClusterMeta()" class="card-footer-item">Salvar</a>
+						<a href="#" onclick="RemoverMeta()" class="card-footer-item">Remover Meta</a>
+					</footer>
+				</div>			
+				<button class="modal-close is-large" aria-label="close" onclick="closeNav()"></button>
+			</div>
+		</div>
+		
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	</body>
+	
+	<!-- Bulma -->
+	<!-- Font Awesome -->
+
+	
+	
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+	
+	<!-- Anime JS -->
+	<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+	
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css"/>
+	<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css"/>
+	
+	<!-- Javascript -->
+	<script src="js/main.js"></script>
+	<script src="js/calculadora.js"></script>
+	
+	
+	
+	</html>

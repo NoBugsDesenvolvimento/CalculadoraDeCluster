@@ -46,3 +46,39 @@ function SelecionarMeta(id){
     $("#"+id).removeClass('is-primary').addClass('is-warning');
     localStorage.setItem("metaid", id);
 }
+
+
+// Erros nos inputs
+
+$('#membrosExecultando').keyup(function() {
+    if ( Math.round($(this).val()) > 100 ){
+        $('#membrosExecultando').addClass("is-danger");
+        showAlert("ME")
+    } else {
+        $('#membrosExecultando').removeClass("is-danger");
+        removeAlert();
+    }
+});
+
+$('#nps').keyup(function() {
+    if ( (Math.round($(this).val()) > 100) || (Math.round($(this).val()) < -100)){
+        $('#nps').addClass("is-danger");
+        showAlert("nps")
+    } else {
+        $('#nps').removeClass("is-danger");
+        removeAlert();
+    }
+});
+
+function showAlert(id){
+    if (id == "ME"){
+        $("#alerta").text("O valor de Membros Execultando deve estar entre 0 e 100");
+    } else if (id == "nps") {
+        $("#alerta").text("O valor do NPS deve estar entre -100 e 100");
+    }
+    $("#alerta").css("visibility", "visible");
+}
+
+function removeAlert(){
+    $("#alerta").css("visibility", "hidden");
+}

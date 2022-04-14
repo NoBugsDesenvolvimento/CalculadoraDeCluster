@@ -1,4 +1,3 @@
-
 //  ------------------------- 
 // Modal
 function openNav() {

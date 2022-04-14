@@ -50,12 +50,12 @@ function SelecionarMeta(id){
 
 // Erros nos inputs
 
-$('#membrosExecultando').keyup(function() {
-    if ( Math.round($(this).val()) > 100 ){
-        $('#membrosExecultando').addClass("is-danger");
-        showAlert("ME")
+$('#faturamentoSolucoesInovadoras').keyup(function() {
+    if ( (Math.round($(this).val()) > (Math.round($('#faturamento').val())) || (Math.round($(this).val()) < 0)){
+        $('#faturamentoSolucoesInovadoras').addClass("is-danger");
+        showAlert("FSI")
     } else {
-        $('#membrosExecultando').removeClass("is-danger");
+        $('#faturamentoSolucoesInovadoras').removeClass("is-danger");
         removeAlert();
     }
 });
@@ -71,8 +71,8 @@ $('#nps').keyup(function() {
 });
 
 function showAlert(id){
-    if (id == "ME"){
-        $("#alerta").text("O valor de Membros Execultando deve estar entre 0 e 100");
+    if (id == "FSI"){
+        $("#alerta").text("O valor do somatório do faturamento das soluções invadoras deve estar entre 0 e faturamento anual");
     } else if (id == "nps") {
         $("#alerta").text("O valor do NPS deve estar entre -100 e 100");
     }

@@ -1,8 +1,8 @@
-let Cluster_1 = 26320.55;
-let Cluster_2 = 73950;
-let Cluster_3 = 166666.71;
-let Cluster_4 = 389536.5;
-let Cluster_5 = 389537;
+let Cluster_1 = 50416.08;
+let Cluster_2 = 169027.76;
+let Cluster_3 = 1031376.94;
+let Cluster_4 = 3279582.83;
+let Cluster_5 = 3279582.83;
 
 
 let DEBUG_MODE = {
@@ -34,7 +34,8 @@ function calcular() {
     var ultimaPontuacao = localStorage.getItem("ultimaPontuacao"); 
 
     var ej = {
-        membrosProjetos: form.membrosExecultando.value,
+        faturamentoProjetosInovacao: form.faturamentoProjetosInovacao.value,
+        quantProjetosInovacao: form.quantProjetosInovacao.value,
         faturamento: form.faturamento.value,
         membros: form.membros.value,
         nps: form.nps.value,
@@ -64,7 +65,8 @@ function calcular() {
 
 // Calcula a pontução
 function calculaPontuacao(ej) {
-    var Pontos = parseInt(ej.membrosProjetos / 100 * (ej.faturamento / ej.membros) * ej.nps);
+    let taxaDeInovação = ((ej.faturamentoProjetosInovacao / ej.faturamento) * ej.quantProjetosInovacao) + 1;
+    var Pontos = parseInt( taxaDeInovação * (ej.faturamento / ej.membros) * ej.nps);
 
     if (ej.ultimaPontuacao != Pontos ){
         ej.ultimaPontuacao = ej.pontuacao;

@@ -249,12 +249,15 @@ body {
 .card-dados-ej {
   font-family: poppins;
   border-radius: 6px;
-  height: 510px;
+  margin-top: 15px;
+  height: 620px;
 }
 
 .card-field-dados-ej {
   text-align: center;
   margin-top: 3rem;
+  border-radius: 6px;
+  height: 620px;
 }
 
 p.titulos {
@@ -271,7 +274,8 @@ p.titulos {
 .card-ej-info {
   font-family: poppins;
   border-radius: 6px;
-  height: 510px;
+  margin-top: 15px;
+  height: 620px;
 }
 
 p.titulo-ej {
